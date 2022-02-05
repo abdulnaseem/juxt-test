@@ -69,7 +69,7 @@ public class Main {
 					
 					flight.add(new FlightEvents(planeId, planeModel, origin, destination, 
 							eventType, timeStamp, fuelDelta));
-				break;
+					break;
 				
 				case 2:
 					//DISPLAY
