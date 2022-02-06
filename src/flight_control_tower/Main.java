@@ -29,6 +29,7 @@ public class Main {
 		flight.add(new FlightEvents("F123", "747", "LONDON", "CAIRO", 
 				"Land", "2021-03-29T14:00:00", -324));
 		
+		System.out.println(flight.size());
 		
 		int selection;
 		
@@ -92,16 +93,20 @@ public class Main {
 		            System.out.println("----------------------------");
 		            
 		            i = flight.iterator();
+		            Iterator<FlightEvents> j = flight.iterator();
 		            while(i.hasNext()){
+		            	
 		            	FlightEvents f = i.next();
+		            	FlightEvents f2 = i.next();
+		            	System.out.println(f.getPlaneId() + " " + f2.getPlaneId());
 		            	
 		                if(f.getTimeStamp().equals(timestmp))  {
-		                	
 		                	status(f);
 		                			                	
 		                	found = true;		                	
 		                }
-		            }		               
+		            }
+
 		            if(!found){
 		            	System.out.println("Record Not Found");
 		            }
@@ -109,6 +114,7 @@ public class Main {
 					break;
 					
 				case 4:
+					//DELETE
 					found = false;
 		            System.out.println("Enter Plane ID and Time Stamp to Delete.");
 		               
